@@ -16,6 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Zadanie01"
+run/main_scene="res://Mapa.tscn"
 config/icon="res://icon.png"
 
 [rendering]

@@ -1,26 +1,21 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/art/asset3.png" type="Texture" id=1]
-[ext_resource path="res://assets/art/asset1.png" type="Texture" id=2]
+[ext_resource path="res://Gracz.gd" type="Script" id=1]
+[ext_resource path="res://assets/art/asset_run1.png" type="Texture" id=4]
 
-[sub_resource type="SpriteFrames" id=1]
-animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
-"loop": true,
-"name": "run",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-} ]
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 32.0
+height = 64.0
 
-[node name="Gracz" type="Area2D"]
+[node name="Gracz" type="KinematicBody2D"]
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 1 )
-animation = "run"
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

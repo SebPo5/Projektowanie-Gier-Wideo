@@ -19,6 +19,10 @@ config/name="Zadanie01"
 run/main_scene="res://Mapa.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=4015
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

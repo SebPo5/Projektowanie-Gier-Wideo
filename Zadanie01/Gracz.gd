@@ -2,21 +2,33 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
+const MAXFALLSPEED = 300
 const ACCELERATION = 100
 const MAX_SPEED = 300
 const JUMP_HEIGHT = -500
 
 var motion = Vector2()
+var screen_size
+
+signal endGame
+
+
+
 
 func start(pos):
 	position = pos
 	show()
-	$CollisionShape2D.disabled = false
+
+func end(pos):
+	position = pos
+	show()
 
 func _physics_process(delta):
 	motion.y += GRAVITY
+	if motion.y > MAXFALLSPEED:
+		motion.y = MAXFALLSPEED
+	
 	var friction = false
-
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x += ACCELERATION
@@ -47,3 +59,7 @@ func _physics_process(delta):
 	
 	motion = move_and_slide(motion, UP)
 	pass
+
+func _on_Area2D_body_entered(body):
+	hide() 
+	emit_signal("endGame")

@@ -21,13 +21,15 @@ __meta__ = {
 }
 
 [node name="Message" type="Label" parent="."]
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = -387.0
-margin_bottom = -198.0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -325.0
+margin_top = -94.5
+margin_right = 325.0
+margin_bottom = 94.5
 custom_fonts/font = SubResource( 1 )
-text = "Wymknięcie się z Uqbaru zawdzięczam pożyteczności lustra."
 align = 1
 autowrap = true
 __meta__ = {
@@ -39,18 +41,17 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -73.0
-margin_top = -200.0
-margin_right = 73.0
-margin_bottom = -100.0
+margin_left = -86.0
+margin_top = -100.0
+margin_right = 86.0
 custom_fonts/font = SubResource( 1 )
-text = "Start"
+text = "Uqbar"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MessageTimer" type="Timer" parent="."]
-wait_time = 4.0
 one_shot = true
+autostart = true
 [connection signal="pressed" from="StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="timeout" from="MessageTimer" to="." method="_on_MessageTimer_timeout"]

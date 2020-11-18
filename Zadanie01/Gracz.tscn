@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/art/background.png" type="Texture" id=5]
 [ext_resource path="res://Gracz.gd" type="Script" id=6]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 3 ) ],
 "loop": true,
@@ -30,63 +30,89 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=2]
 radius = 32.0
 height = 81.0682
 
 [node name="Gracz" type="KinematicBody2D"]
 script = ExtResource( 6 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "run"
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="background" type="Sprite" parent="ParallaxBackground"]
 modulate = Color( 1, 1, 1, 0.321569 )
 self_modulate = Color( 1, 1, 1, 0.407843 )
-scale = Vector2( 1.40969, 1.70787 )
+scale = Vector2( 1.01357, 1.61468 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="background2" type="Sprite" parent="ParallaxBackground"]
 modulate = Color( 1, 1, 1, 0.321569 )
 self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 960, 0 )
-scale = Vector2( 1.40969, 1.70787 )
+position = Vector2( 0, 352 )
+scale = Vector2( 1.01357, 1.61468 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="background3" type="Sprite" parent="ParallaxBackground"]
 modulate = Color( 1, 1, 1, 0.321569 )
 self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 1920, 0 )
-scale = Vector2( 1.40969, 1.70787 )
+position = Vector2( 0, 704 )
+scale = Vector2( 1.01357, 1.61468 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="background4" type="Sprite" parent="ParallaxBackground"]
 modulate = Color( 1, 1, 1, 0.321569 )
 self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 2880, 0 )
-scale = Vector2( 1.40969, 1.70787 )
+position = Vector2( 0, 1056 )
+scale = Vector2( 1.01357, 1.61468 )
 texture = ExtResource( 5 )
 centered = false
 
 [node name="background5" type="Sprite" parent="ParallaxBackground"]
 modulate = Color( 1, 1, 1, 0.321569 )
 self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 3840, 0 )
-scale = Vector2( 1.40969, 1.70787 )
+position = Vector2( 0, 1408 )
+scale = Vector2( 1.01357, 1.61468 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="background6" type="Sprite" parent="ParallaxBackground"]
+modulate = Color( 1, 1, 1, 0.321569 )
+self_modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( 0, 1760 )
+scale = Vector2( 1.01357, 1.61468 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="background7" type="Sprite" parent="ParallaxBackground"]
+modulate = Color( 1, 1, 1, 0.321569 )
+self_modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( 0, 2112 )
+scale = Vector2( 1.01357, 1.61468 )
+texture = ExtResource( 5 )
+centered = false
+
+[node name="background8" type="Sprite" parent="ParallaxBackground"]
+modulate = Color( 1, 1, 1, 0.321569 )
+self_modulate = Color( 1, 1, 1, 0.407843 )
+position = Vector2( 0, 2464 )
+scale = Vector2( 1.01357, 1.61468 )
 texture = ExtResource( 5 )
 centered = false
 

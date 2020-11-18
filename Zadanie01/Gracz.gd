@@ -8,6 +8,11 @@ const JUMP_HEIGHT = -500
 
 var motion = Vector2()
 
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
+
 func _physics_process(delta):
 	motion.y += GRAVITY
 	var friction = false

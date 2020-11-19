@@ -8,7 +8,6 @@ func show_message(text):
 	$MessageTimer.start()
 
 func show_game_over():
-	show_message("Uqbar cię wyzwolił!")
 	yield($MessageTimer, "timeout")
 	$Message.show()
 	yield(get_tree().create_timer(1), "timeout")
@@ -16,9 +15,6 @@ func show_game_over():
 
 func update_score(score):
 	$ScoreLabel.text = str(score)
-
-func _ready():
-	pass
 
 
 func _on_MessageTimer_timeout():

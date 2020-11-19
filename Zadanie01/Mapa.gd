@@ -3,9 +3,6 @@ var score
 var position
 var motion
 
-func _ready():
-	randomize()
-	new_game()
 
 func new_game():
 	$HUD.update_score(score)

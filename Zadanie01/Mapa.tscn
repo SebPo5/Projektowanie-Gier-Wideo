@@ -637,7 +637,6 @@ shape = SubResource( 1 )
 [node name="ScoreTimer" type="Timer" parent="."]
 
 [node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
 one_shot = true
 
 [node name="StartPosition" type="Position2D" parent="."]
@@ -647,7 +646,7 @@ position = Vector2( 64.5551, 2309.54 )
 position = Vector2( 560.425, 48.6809 )
 scale = Vector2( 0.3, 0.3 )
 
-[node name="Area2D" parent="EndPosition" instance=ExtResource( 6 )]
+[node name="EndGame" parent="EndPosition" instance=ExtResource( 6 )]
 position = Vector2( 10.2556, -6.83673 )
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
@@ -657,5 +656,5 @@ position = Vector2( 384, 3008 )
 [connection signal="endGame" from="Gracz" to="." method="EndGame_win"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
-[connection signal="body_entered" from="EndPosition/Area2D" to="Gracz" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="EndPosition/EndGame" to="Gracz" method="_on_Area2D_body_entered"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]

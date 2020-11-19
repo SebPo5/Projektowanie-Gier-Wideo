@@ -658,3 +658,4 @@ position = Vector2( 384, 3008 )
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_ScoreTimer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
 [connection signal="body_entered" from="EndPosition/Area2D" to="Gracz" method="_on_Area2D_body_entered"]
+[connection signal="start_game" from="HUD" to="." method="new_game"]

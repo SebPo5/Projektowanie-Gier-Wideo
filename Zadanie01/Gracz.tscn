@@ -9,15 +9,15 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "basic",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "jump",
 "speed": 3.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "basic",
+"speed": 5.0
 }, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
@@ -53,65 +53,7 @@ shape = SubResource( 2 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="background" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background2" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 352 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background3" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 704 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background4" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 1056 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background5" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 1408 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background6" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 1760 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background7" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 2112 )
-scale = Vector2( 1.01357, 1.61468 )
-texture = ExtResource( 5 )
-centered = false
-
-[node name="background8" type="Sprite" parent="ParallaxBackground"]
-modulate = Color( 1, 1, 1, 0.321569 )
-self_modulate = Color( 1, 1, 1, 0.407843 )
-position = Vector2( 0, 2464 )
-scale = Vector2( 1.01357, 1.61468 )
+scale = Vector2( 1.28983, 1.36461 )
 texture = ExtResource( 5 )
 centered = false
 

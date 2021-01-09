@@ -1,30 +1,61 @@
 extends KinematicBody2D
 
-export (int) var speed = 1200
-export (int) var jump_speed = -1800
-export (int) var gravity = 4000
-export (float, 0, 1.0) var friction = 0.1
-export (float, 0, 1.0) var acceleration = 0.25
+const UP = Vector2(0, -1)
+const GRAVITY = 20
+const MAXFALLSPEED = 300
+const ACCELERATION = 100
+const MAX_SPEED = 300
+const JUMP_HEIGHT = -500
 
-var velocity = Vector2.ZERO
+var motion = Vector2()
+var screen_size
 
-func get_input():
-	var dir = 0
-	if Input.is_action_pressed("walk_right"):
-		dir += 1
-	if Input.is_action_pressed("walk_left"):
-		dir -= 1
-	if dir != 0:
-		velocity.x = lerp(velocity.x, dir * speed, acceleration)
-	else:
-		velocity.x = lerp(velocity.x, 0, friction)
-	
+signal endGame
+
+
+
+
+func start(pos):
+	position = pos
+	show()
+
+func end(pos):
+	position = pos
+	show()
+
 func _physics_process(delta):
-	get_input()
-	velocity.y += gravity * delta
-	velocity = move_and_slide(velocity, Vector2.UP)
-	if Input.is_action_just_pressed("jump"):
-		if is_on_floor():
-			velocity.y = jump_speed
-		
+	motion.y += GRAVITY
+	if motion.y > MAXFALLSPEED:
+		motion.y = MAXFALLSPEED
 	
+	var friction = false
+	
+	if Input.is_action_pressed("ui_right"):
+		motion.x += ACCELERATION
+		motion.x = min(motion.x, MAX_SPEED)
+		$Sprite.flip_h = false
+		$Sprite.play("run")
+	elif Input.is_action_pressed("ui_left"):
+		motion.x -= ACCELERATION
+		motion.x = max(motion.x, -MAX_SPEED)
+		$Sprite.flip_h = true
+		$Sprite.play("run")
+	else:
+		$Sprite.play("basic")
+		friction = true
+	
+	if is_on_floor():
+		if Input.is_action_just_pressed("ui_up"):
+			motion.y = JUMP_HEIGHT
+		if friction == true:
+			motion.x = lerp(motion.x, 0, 0.2)
+	else:
+		if motion.y < 0:
+			$Sprite.play("jump")
+		else:
+			$Sprite.play("fall")
+		if friction == true:
+			motion.x = lerp(motion.x, 0, 0.05)
+	
+	motion = move_and_slide(motion, UP)
+	pass

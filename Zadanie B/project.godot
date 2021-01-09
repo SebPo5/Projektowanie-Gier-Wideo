@@ -16,12 +16,13 @@ _global_script_class_icons={
 [application]
 
 config/name="Zadanie B"
+run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=3018
-window/size/height=908
+window/size/width=1071
+window/size/height=585
 
 [rendering]
 

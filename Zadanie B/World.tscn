@@ -137,7 +137,7 @@ position = Vector2( 1, 1 )
 script = ExtResource( 7 )
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 217.22, -22.762 )
+position = Vector2( 872.6, -114.323 )
 tile_set = SubResource( 2 )
 cell_size = Vector2( 16, 16 )
 format = 1
@@ -148,15 +148,18 @@ layer = -1
 follow_viewport_enable = true
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 491.535, 708.389 )
 motion_scale = Vector2( 0, 0 )
+motion_mirroring = Vector2( 1000, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( -636.105, -72.2845 )
+position = Vector2( -1214.38, -289.138 )
 scale = Vector2( 2.9203, 3.28455 )
 texture = ExtResource( 3 )
 centered = false
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2( 67.4658, -81.9224 )
 motion_scale = Vector2( 0, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
@@ -248,4 +251,4 @@ format = 1
 tile_data = PoolIntArray( 2555932, 4, 0, 2687004, 1, 0, 2687005, 6, 0, 2687006, 2, 0, 2752541, 5, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( -517.291, 317.076 )
+position = Vector2( -690.774, 1218.22 )

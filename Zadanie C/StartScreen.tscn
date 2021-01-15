@@ -1,13 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/font/NewShape-Book.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://assets/font/NewShape-BoldOblique.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ButtonPlay.gd" type="Script" id=3]
 [ext_resource path="res://background-5594879_1280.jpg" type="Texture" id=4]
-
-[sub_resource type="DynamicFont" id=1]
-size = 110
-font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 80
@@ -39,22 +35,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
-margin_left = 9.62738
-margin_top = 54.425
-margin_right = 1289.63
-margin_bottom = 329.425
-rect_rotation = 5.0
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.764706, 0.752941, 0, 1 )
-custom_colors/font_color_shadow = Color( 0.929412, 0, 0.984314, 1 )
-custom_constants/shadow_offset_x = 8
-text = "Guess the Number!"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Label" parent="." instance=ExtResource( 2 )]
 
 [node name="ButtonPlay" type="Button" parent="."]
 margin_left = 432.0

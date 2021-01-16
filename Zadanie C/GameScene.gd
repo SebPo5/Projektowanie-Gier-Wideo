@@ -18,6 +18,8 @@ func _on_LineEdit_text_entered(new_text):
 	#jak wyczyścić tekst po enterze? [jakiś "clear"?]
 	#załadowąć po prostu scenę zwycięstwa/porażki
 	
+	#może o to chodzi właśnie – że text=/=liczba, czyli:
+	#text–>liczba, jeśli liczba=wygenerowana..., load scene...
 #	var liczba = 0
 
 #	moja proba: if liczba==RandomNumberGenerator.new(): print ("TAK!")

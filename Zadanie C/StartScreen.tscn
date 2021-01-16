@@ -3,9 +3,9 @@
 [ext_resource path="res://assets/font/NewShape-Book.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://ButtonPlay.gd" type="Script" id=3]
-[ext_resource path="res://background-5594879_1280.jpg" type="Texture" id=4]
+[ext_resource path="res://Logo.tscn" type="PackedScene" id=4]
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=1]
 size = 80
 font_data = ExtResource( 1 )
 
@@ -24,16 +24,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Logo" type="TextureRect" parent="."]
-modulate = Color( 0.219608, 0.2, 0.227451, 1 )
-self_modulate = Color( 1, 1, 1, 0.447059 )
-margin_right = 1280.0
-margin_bottom = 720.0
-texture = ExtResource( 4 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="Logo" parent="." instance=ExtResource( 4 )]
 
 [node name="Label" parent="." instance=ExtResource( 2 )]
 
@@ -42,7 +33,7 @@ margin_left = 432.0
 margin_top = 407.0
 margin_right = 829.0
 margin_bottom = 544.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.945098, 0, 1, 1 )
 custom_colors/font_color_hover = Color( 0.764706, 0.752941, 0, 1 )
 text = "PLAY"

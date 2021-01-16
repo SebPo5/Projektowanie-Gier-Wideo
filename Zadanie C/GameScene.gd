@@ -6,7 +6,7 @@ var tries = 10
 func _ready():
 	
 	rng.randomize()
-	var my_random_number = rng.randi_range(0, 100)
+	var my_random_number = rng.randi_range(1, 100)
 	get_node("SpinBoxTool").value = my_random_number
 	print(my_random_number)
 	

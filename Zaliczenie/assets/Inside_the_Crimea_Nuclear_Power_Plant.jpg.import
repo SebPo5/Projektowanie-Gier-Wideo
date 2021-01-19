@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Inside_the_Crimea_Nuclear_Power_Plant.jpg-c04718a9f9ca92b8e0e22fb8e0815537.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://assets/Inside_the_Crimea_Nuclear_Power_Plant.jpg"
+dest_files=[ "res://.import/Inside_the_Crimea_Nuclear_Power_Plant.jpg-c04718a9f9ca92b8e0e22fb8e0815537.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

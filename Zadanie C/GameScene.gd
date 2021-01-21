@@ -19,6 +19,7 @@ func _ready():
 
 func _on_SpinBoxGuess_value_changed(try):
 	tries = tries - 0.5
+	get_node("SpinBoxGuess").value = 0
 	get_node("SpinBoxTries").value = tries
 	if try == $SpinBoxTool.value:
 		get_tree().change_scene("res://WinScene.tscn")
@@ -28,4 +29,3 @@ func _on_SpinBoxGuess_value_changed(try):
 		get_node("Label").text = "too low!"
 	if tries == 0:
 		get_tree().change_scene("res://LoseScene.tscn")
-	get_node("SpinBoxGuess").value = 0

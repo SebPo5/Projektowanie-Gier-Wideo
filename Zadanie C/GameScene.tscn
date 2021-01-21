@@ -66,6 +66,7 @@ margin_top = 300.0
 margin_right = 824.0
 margin_bottom = 324.0
 rect_scale = Vector2( 3, 3 )
+mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -90,6 +91,7 @@ margin_top = 400.0
 margin_right = 824.0
 margin_bottom = 424.0
 rect_scale = Vector2( 3, 3 )
+mouse_filter = 2
 
 [node name="SpinBoxTool" type="SpinBox" parent="."]
 visible = false

@@ -15,7 +15,7 @@ font_data = ExtResource( 2 )
 size = 80
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 30
 font_data = ExtResource( 3 )
 
@@ -92,7 +92,7 @@ __meta__ = {
 margin_top = 68.0
 margin_right = 400.0
 margin_bottom = 117.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 text = "Your name"
 align = 1
 __meta__ = {

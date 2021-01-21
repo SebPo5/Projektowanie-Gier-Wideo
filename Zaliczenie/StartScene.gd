@@ -12,4 +12,5 @@ func _on_Button_pressed(scene_to_load):
 
 func _on_LineEdit_text_entered(new_text):
 	$VBoxContainer/Name.text = new_text
-	
+	if new_text.length() > 0:
+		$VBoxContainer/LineEdit.clear()

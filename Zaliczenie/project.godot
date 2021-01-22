@@ -19,6 +19,10 @@ config/name="Zaliczenie"
 run/main_scene="res://StartScene.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+global="*res://global.gd"
+
 [display]
 
 window/size/width=1280

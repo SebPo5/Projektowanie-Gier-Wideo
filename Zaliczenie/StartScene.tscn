@@ -4,7 +4,6 @@
 [ext_resource path="res://assets/font/Warenhaus-Standard.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://assets/font/NewShape-Book.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://ButtonPlay.gd" type="Script" id=4]
-[ext_resource path="res://Name.tscn" type="PackedScene" id=5]
 [ext_resource path="res://StartScene.gd" type="Script" id=6]
 
 [sub_resource type="DynamicFont" id=1]
@@ -16,6 +15,10 @@ size = 80
 font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 30
 font_data = ExtResource( 3 )
 
@@ -86,14 +89,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Name" parent="VBoxContainer" instance=ExtResource( 5 )]
+[node name="Name" type="Label" parent="VBoxContainer"]
+margin_right = 400.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.466667, 0.52549, 0.231373, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 0.329412, 0.152941, 1 )
+align = 1
 
 [node name="LineEdit" type="LineEdit" parent="VBoxContainer"]
 margin_top = 68.0
 margin_right = 400.0
 margin_bottom = 117.0
-custom_fonts/font = SubResource( 3 )
-text = "Your name"
+custom_fonts/font = SubResource( 4 )
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false

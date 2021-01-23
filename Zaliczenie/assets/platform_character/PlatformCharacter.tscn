@@ -1,82 +1,87 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/platform_character/PlatformCharacter.gd" type="Script" id=1]
+[ext_resource path="res://assets/Dungeon Ruins Tileset/Hero/run.png" type="Texture" id=2]
+[ext_resource path="res://assets/Dungeon Ruins Tileset/Hero/Small jump.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8.74419, 15.2053 )
 
 [sub_resource type="AtlasTexture" id=2]
-region = Rect2( 0, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 18, 0, 18, 27 )
 
 [sub_resource type="AtlasTexture" id=3]
-region = Rect2( 96, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=4]
-region = Rect2( 192, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 27, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=5]
-region = Rect2( 288, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 54, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=6]
-region = Rect2( 384, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 81, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=7]
-region = Rect2( 480, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 108, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=8]
-region = Rect2( 576, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 135, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=9]
-region = Rect2( 672, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 3 )
+region = Rect2( 0, 162, 63, 27 )
 
 [sub_resource type="AtlasTexture" id=10]
-region = Rect2( 0, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 18, 0, 18, 27 )
 
 [sub_resource type="AtlasTexture" id=11]
-region = Rect2( 96, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 18, 27, 18, 27 )
 
 [sub_resource type="AtlasTexture" id=12]
-region = Rect2( 192, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 18, 54, 18, 27 )
 
 [sub_resource type="AtlasTexture" id=13]
-region = Rect2( 288, 32, 96, 32 )
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 18, 81, 18, 27 )
 
-[sub_resource type="AtlasTexture" id=14]
-region = Rect2( 384, 32, 96, 32 )
-
-[sub_resource type="AtlasTexture" id=15]
-region = Rect2( 480, 32, 96, 32 )
-
-[sub_resource type="AtlasTexture" id=16]
-region = Rect2( 576, 32, 96, 32 )
-
-[sub_resource type="AtlasTexture" id=17]
-region = Rect2( 672, 32, 96, 32 )
-
-[sub_resource type="AtlasTexture" id=18]
-region = Rect2( 768, 32, 96, 32 )
-
-[sub_resource type="AtlasTexture" id=19]
-region = Rect2( 864, 32, 96, 32 )
-
-[sub_resource type="AtlasTexture" id=20]
-region = Rect2( 776, 32, 97, 32 )
-
-[sub_resource type="SpriteFrames" id=21]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
+"frames": [ SubResource( 2 ) ],
 "loop": true,
-"name": "run",
+"name": "basic",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
 "loop": true,
 "name": "jump",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 20 ) ],
+"frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
-"name": "basic",
+"name": "run",
 "speed": 5.0
 } ]
 
@@ -90,7 +95,6 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 0, -100 )
 current = true
-zoom = Vector2( 1.2, 1.2 )
 limit_left = 0
 limit_top = -100
 limit_right = 2920
@@ -100,4 +104,4 @@ drag_margin_bottom = 0.0
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 position = Vector2( 4.01399, -0.669006 )
-frames = SubResource( 21 )
+frames = SubResource( 14 )

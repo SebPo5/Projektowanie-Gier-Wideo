@@ -57,3 +57,7 @@ func _physics_process(delta):
 	
 	motion = move_and_slide(motion, UP)
 	pass
+
+
+func _on_SceneEnding_body_entered(body):
+	emit_signal("endGame")

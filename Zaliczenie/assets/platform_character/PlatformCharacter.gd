@@ -13,15 +13,10 @@ var screen_size
 signal endGame
 
 
-
-
 func start(pos):
 	position = pos
 	show()
 
-func end(pos):
-	position = pos
-	show()
 
 func _physics_process(delta):
 	motion.y += GRAVITY
@@ -59,5 +54,6 @@ func _physics_process(delta):
 	pass
 
 
-func _on_SceneEnding_body_entered(body):
+func _on_EndGame_body_entered(body):
+	hide() 
 	emit_signal("endGame")

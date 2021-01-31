@@ -4,8 +4,8 @@ const UP = Vector2(0, -1)
 const GRAVITY = 20
 const MAXFALLSPEED = 300
 const ACCELERATION = 100
-const MAX_SPEED = 300
-const JUMP_HEIGHT = -500
+const MAX_SPEED = 150
+const JUMP_HEIGHT = -550
 
 var motion = Vector2()
 var screen_size
@@ -64,3 +64,22 @@ func _on_EndGame_body_entered(body):
 
 func _on_SwitchLevel_body_entered(body):
 	get_tree().change_scene("res://GameScene2.tscn")
+
+func bounce():
+	motion.y = JUMP_HEIGHT * 0.7
+
+func hit(var enemyposx):
+	set_modulate(Color(1,0.3,0.3,0.5))
+	motion.y = JUMP_HEIGHT * 0.5
+	
+	if position.x < enemyposx:
+		motion.x = -100
+	elif position.x > enemyposx:
+		motion.x = 100
+	
+	Input.action_release("ui_left")
+	Input.action_release("ui_right")
+	$Timer.start()
+	
+func _on_Timer_timeout():
+	get_tree().change_scene("res://GameScene1.tscn")

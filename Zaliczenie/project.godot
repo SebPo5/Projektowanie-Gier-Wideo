@@ -28,6 +28,12 @@ global="*res://global.gd"
 window/size/width=1280
 window/size/height=720
 
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="platform"
+2d_physics/layer_3="enemy"
+
 [rendering]
 
 environment/default_clear_color=Color( 0.101961, 0.227451, 0.203922, 1 )

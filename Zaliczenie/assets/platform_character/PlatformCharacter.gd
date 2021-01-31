@@ -12,7 +12,6 @@ var screen_size
 
 signal endGame
 
-
 func start(pos):
 	position = pos
 	show()
@@ -52,8 +51,14 @@ func _physics_process(delta):
 	
 	motion = move_and_slide(motion, UP)
 	pass
-
-
-func _on_EndGame_body_entered(body):
+	
+func _on_GameFail_body_entered(body):
 	hide() 
 	emit_signal("endGame")
+
+func _on_EndGame_body_entered(body):
+	get_tree().change_scene("res://WinScene.tscn")
+
+
+func _on_SwitchLevel_body_entered(body):
+	get_tree().change_scene("res://GameScene2.tscn")

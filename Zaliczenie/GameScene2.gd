@@ -1,7 +1,9 @@
 extends Node2D
 
-
 func _ready():
+	$VBoxContainer/Name.text = global.yourName
+
+func new_game():
 	$Player.start($StartPosition.position)
 
 

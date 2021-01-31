@@ -7,7 +7,6 @@
 [ext_resource path="res://assets/font/NewShape-Book.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://assets/Dungeon Ruins Tileset/RuinsBackground.png" type="Texture" id=6]
 [ext_resource path="res://assets/Dungeon Ruins Tileset/Dungeon Ruins Tileset Day.png" type="Texture" id=7]
-[ext_resource path="res://SceneEnding.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 50
@@ -364,6 +363,8 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 11/z_index = 0
 
+[sub_resource type="CapsuleShape2D" id=21]
+
 [node name="GameScene1" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -443,10 +444,10 @@ centered = false
 [node name="TileMap" type="TileMap" parent="CanvasLayer"]
 format = 1
 
-[node name="EndPosition" type="Position2D" parent="."]
-position = Vector2( 1183.35, 356.99 )
-scale = Vector2( 0.5, 0.5 )
+[node name="SwitchLevel" type="Area2D" parent="."]
+position = Vector2( 1200.17, 341.883 )
 
-[node name="SceneEnding" parent="EndPosition" instance=ExtResource( 9 )]
-scale = Vector2( 3, 1.5 )
-[connection signal="body_entered" from="EndPosition/SceneEnding" to="Player" method="_on_SceneEnding_body_entered"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchLevel"]
+shape = SubResource( 21 )
+[connection signal="endGame" from="Player" to="." method="_on_Player_endGame"]
+[connection signal="body_entered" from="SwitchLevel" to="Player" method="_on_SwitchLevel_body_entered"]

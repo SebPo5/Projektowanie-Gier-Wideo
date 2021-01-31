@@ -2,7 +2,7 @@ extends Control
 
 
 func _ready():
-	$VBoxContainer/Name.text = global.yourName
+	$Player/VBoxContainer/Name.text = global.yourName
 
 
 func _on_Player_endGame():

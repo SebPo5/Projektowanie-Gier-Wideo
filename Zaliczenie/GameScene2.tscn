@@ -9,6 +9,11 @@
 [ext_resource path="res://GameScene2.gd" type="Script" id=7]
 [ext_resource path="res://assets/font/NewShape-Book.ttf" type="DynamicFontData" id=8]
 
+[sub_resource type="DynamicFont" id=13]
+size = 10
+extra_spacing_top = -20
+font_data = ExtResource( 8 )
+
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
@@ -310,15 +315,25 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="DynamicFont" id=13]
-size = 50
-font_data = ExtResource( 8 )
-
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 7 )
 
 [node name="Player" parent="." instance=ExtResource( 4 )]
 position = Vector2( 836.575, 157.077 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Player"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="Player/VBoxContainer"]
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.466667, 0.52549, 0.231373, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 0.329412, 0.152941, 1 )
+align = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
@@ -371,24 +386,6 @@ collision_mask = 2147483648
 
 [node name="GameFail" parent="." instance=ExtResource( 5 )]
 position = Vector2( 677.291, 2093.28 )
-
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_left = 0.5
-anchor_right = 0.5
-margin_left = 465.0
-margin_right = 865.0
-margin_bottom = 100.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Name" type="Label" parent="VBoxContainer"]
-margin_right = 399.0
-margin_bottom = 64.0
-custom_fonts/font = SubResource( 13 )
-custom_colors/font_color = Color( 0.466667, 0.52549, 0.231373, 1 )
-custom_colors/font_color_shadow = Color( 0.00784314, 0.329412, 0.152941, 1 )
-align = 1
 [connection signal="endGame" from="Player" to="." method="_on_Player_endGame"]
 [connection signal="body_entered" from="EndGame" to="Player" method="_on_EndGame_body_entered"]
 [connection signal="body_entered" from="GameFail" to="Player" method="_on_GameFail_body_entered"]

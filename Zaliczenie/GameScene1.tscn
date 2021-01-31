@@ -10,11 +10,6 @@
 [ext_resource path="res://assets/Dungeon Ruins Tileset/Dungeon Ruins Tileset Night.png" type="Texture" id=8]
 [ext_resource path="res://GameFailGS2.tscn" type="PackedScene" id=9]
 
-[sub_resource type="DynamicFont" id=1]
-size = 10
-extra_spacing_top = -20
-font_data = ExtResource( 5 )
-
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 48, 0, 48, 48, 0, 48 )
 
@@ -632,6 +627,10 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 radius = 11.811
 height = 23.5522
 
+[sub_resource type="DynamicFont" id=29]
+size = 60
+font_data = ExtResource( 5 )
+
 [node name="GameScene1" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -647,22 +646,6 @@ __meta__ = {
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 33.7117, 450.904 )
 collision_mask = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Player"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Name" type="Label" parent="Player/VBoxContainer"]
-grow_horizontal = 0
-size_flags_vertical = 1
-custom_fonts/font = SubResource( 1 )
-custom_colors/font_color = Color( 0.466667, 0.52549, 0.231373, 1 )
-custom_colors/font_color_shadow = Color( 0.00784314, 0.329412, 0.152941, 1 )
-align = 1
-valign = 1
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 23 )
@@ -779,5 +762,18 @@ position = Vector2( 1208.08, 351.631 )
 [node name="Enemy8" parent="enemies" instance=ExtResource( 4 )]
 position = Vector2( 1195.23, 480.83 )
 direction = 1
+
+[node name="Name" type="CanvasLayer" parent="."]
+
+[node name="PlayerName" type="Label" parent="Name"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 29 )
+custom_colors/font_color = Color( 0.784314, 0.615686, 0.392157, 1 )
+custom_colors/font_color_shadow = Color( 0.184314, 0.168627, 0.00392157, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="endGame" from="Player" to="." method="_on_Player_endGame"]
 [connection signal="body_entered" from="SwitchLevel" to="Player" method="_on_SwitchLevel_body_entered"]

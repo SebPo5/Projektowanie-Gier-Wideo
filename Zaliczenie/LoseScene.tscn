@@ -92,11 +92,7 @@ custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 1, 1, 1, 1 )
 text = "Thanks for:
-https://kenney.nl/assets/platformer-pack-redux
-https://penusbmic.itch.io/free-dungeon-ruins-tileset/download/eyJleHBpcmVzIjoxNjExMjcyNzg4LCJpZCI6Njg3ODM4fQ%3d%3d%2egUfrL72gRXDQOAnQapDdlRRnsnI%3d
-https://commons.wikimedia.org/wiki/File:Green_mountains_icon.png
-https://www.youtube.com/watch?v=eyRNGKVbWm0
-platform charakter skąd…?"
+"
 align = 1
 valign = 2
 autowrap = true

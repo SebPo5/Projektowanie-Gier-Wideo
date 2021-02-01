@@ -3,7 +3,8 @@ extends Control
 var scene_path_to_load
 
 func _ready():
-	$VBoxContainer/Name.text = "Your name is:" + global.yourName
+	MusicController.play_game_music()
+	$VBoxContainer/Name.text = global.yourName
 	$Button/ButtonPlay.grab_focus()
 	for button in $Button.get_children():
 		button.connect("pressed", self, "_on_Button_pressed", [button.scene_to_load])

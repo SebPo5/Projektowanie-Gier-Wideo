@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/02 Space Riddle.ogg-67a077a05f1a6e39fc75b81d2901720a.oggstr"
+
+[deps]
+
+source_file="res://assets/02 Space Riddle.ogg"
+dest_files=[ "res://.import/02 Space Riddle.ogg-67a077a05f1a6e39fc75b81d2901720a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

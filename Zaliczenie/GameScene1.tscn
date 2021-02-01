@@ -624,7 +624,7 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 2/shapes = [  ]
 2/z_index = 0
 
-[sub_resource type="TileSet" id=29]
+[sub_resource type="TileSet" id=27]
 0/name = "cloud1"
 0/texture = ExtResource( 7 )
 0/tex_offset = Vector2( 0, 0 )
@@ -654,11 +654,11 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="CapsuleShape2D" id=27]
+[sub_resource type="CapsuleShape2D" id=28]
 radius = 11.811
 height = 23.5522
 
-[sub_resource type="DynamicFont" id=28]
+[sub_resource type="DynamicFont" id=29]
 size = 60
 font_data = ExtResource( 5 )
 
@@ -759,7 +759,7 @@ follow_viewport_enable = true
 
 [node name="TileMap" type="TileMap" parent="CanvasLayer3"]
 modulate = Color( 0.0666667, 0.207843, 0.0117647, 0.811765 )
-tile_set = SubResource( 29 )
+tile_set = SubResource( 27 )
 cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 1179714, 1, 0, 1245217, 0, 0, 1245232, 1, 0, 1245255, 0, 0, 1376274, 1, 0, 1703942, 0, 0, 1703987, 0, 0 )
@@ -769,7 +769,7 @@ position = Vector2( 1200.17, 341.883 )
 collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SwitchLevel"]
-shape = SubResource( 27 )
+shape = SubResource( 28 )
 
 [node name="GameFail" parent="." instance=ExtResource( 9 )]
 position = Vector2( 663.135, 1083.01 )
@@ -809,7 +809,7 @@ direction = 1
 [node name="PlayerName" type="Label" parent="Name"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-custom_fonts/font = SubResource( 28 )
+custom_fonts/font = SubResource( 29 )
 custom_colors/font_color = Color( 0.784314, 0.615686, 0.392157, 1 )
 custom_colors/font_color_shadow = Color( 0.184314, 0.168627, 0.00392157, 1 )
 align = 1

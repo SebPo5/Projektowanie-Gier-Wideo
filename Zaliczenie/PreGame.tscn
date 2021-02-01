@@ -11,6 +11,8 @@ font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 80
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 4 )
 
 [node name="PreGame" type="Control"]
@@ -39,8 +41,9 @@ custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.980392, 1, 0.901961, 1 )
 custom_colors/font_color_shadow = Color( 0.00784314, 0.329412, 0.152941, 1 )
 custom_constants/shadow_offset_x = 5
-text = "You are on a post-nuclear Earth. 
-Try to survive the nuclear warfare!"
+text = "The post-nuclear 
+Earth. 
+Try to survive the nuclear apocalypse!"
 align = 1
 valign = 1
 autowrap = true
@@ -52,23 +55,22 @@ __meta__ = {
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 480.0
-margin_top = -170.0
-margin_right = -471.0
-margin_bottom = -62.0
+margin_top = -160.0
+margin_bottom = -52.0
 mouse_filter = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ButtonReady" type="Button" parent="Buttons"]
-margin_right = 329.0
+margin_right = 1280.0
 margin_bottom = 108.0
 custom_fonts/font = SubResource( 2 )
-custom_colors/font_color = Color( 0.345098, 0.0745098, 0.0745098, 1 )
-custom_colors/font_color_hover = Color( 0.345098, 0.0745098, 0.0745098, 1 )
+custom_colors/font_color = Color( 0.74902, 0.0313726, 0.0117647, 1 )
+custom_colors/font_color_hover = Color( 0.74902, 0.0313726, 0.0117647, 1 )
 custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 text = "Ready!"
+flat = true
 script = ExtResource( 1 )
 scene_to_load = "res://GameScene1.tscn"
 [connection signal="pressed" from="Buttons/ButtonReady" to="Buttons/ButtonReady" method="_on_ButtonReady_pressed"]

@@ -43,7 +43,7 @@ custom_colors/font_color_shadow = Color( 0.00784314, 0.329412, 0.152941, 1 )
 custom_constants/shadow_offset_x = 5
 text = "The post-nuclear 
 Earth. 
-Try to survive the nuclear apocalypse!"
+Try to survive the nuclear apocalypse."
 align = 1
 valign = 1
 autowrap = true
